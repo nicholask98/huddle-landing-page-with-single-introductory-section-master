@@ -1,0 +1,183 @@
+/* ================ 
+        General
+   ================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(257, 40%, 49%);
+    background-image: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.page-container {
+    min-height: 100vh;
+    position: relative;
+    margin: 0 2em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================ 
+       Reusables
+   ================ */
+
+.button {
+    position: relative;
+    bottom: 0;
+    background-color: white;
+    color: hsl(300, 69%, 71%);
+    border-radius: 100px;
+    padding: .75em 2.5em;
+    transition: all 300ms ease;
+    box-shadow: 0 6px 10px -2px hsl(257, 40%, 35%);
+}
+
+.button:hover {
+    position: relative;
+    bottom: .3em;
+    box-shadow: 0 18px 30px -6px hsl(257, 40%, 35%);
+}
+
+/* ================ 
+         Main
+   ================ */
+
+h1, h2, h3, 
+h4, h5, h6 {
+    font-family: "poppins", sans-serif;
+}
+
+h1 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p {
+    font-family: "open sans", sans-serif;
+    font-size: 1rem;
+    padding: .75em 0;
+}
+
+.main-content {
+    padding-bottom: 6rem;
+}
+
+.main-content__para {
+    text-align: center;
+    opacity: 70%;
+    margin-bottom: 2em;
+}
+
+.main-content__register {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 40%;
+    max-width: 300px;
+    margin: 2em 0;
+}
+
+img {
+    width: 100%;    
+}
+
+.layout-photo {
+    margin: 1.35em 0;
+}
+
+/* ================ 
+        Footer
+   ================ */
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.social-links {
+    width: 100%;
+    text-align: center;
+}
+
+.fab {
+    font-size: 1.5rem;
+    min-width: 2.65rem;
+    padding: .5rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    transition: all 400ms ease;
+    text-align: center;
+}
+
+.fab:hover {
+    border: 1px solid hsl(257, 40%, 49%);
+    background-color: white;
+    color: hsl(257, 40%, 49%);
+}
+
+.fab + .fab {
+    margin-left: .75em;
+}
+
+.attribution {
+    color: hsl(0, 100%, 70%);
+    font-size: .7rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: white;
+}
+
+@media only screen and (min-width: 376px) {
+    body {
+        background-image: url("images/bg-desktop.svg");
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layout-photo {
+        width: 60%;
+    }
+
+    .main-content {
+        width: 37%;
+        align-self: center;
+    }
+
+    h1,
+    .main-content__para,
+    .main-content__register {
+        text-align: inherit;
+    }
+
+    .social-links {
+        text-align: end;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 20px;
+    }
+}
